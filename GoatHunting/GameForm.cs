@@ -8,10 +8,12 @@ namespace GoatHunting
     {
         private const int PlayerInitialPositionX = 50;
         private const int PlayerInitialPositionY = 50;
-        private const int AnimationInterval = 100;
+        private const int AnimationInterval = 16;
 
         private Player _player;
         private System.Windows.Forms.Timer _animationTimer;
+
+        private bool goLeft, goRight, goUp, goDown; // Movement flags
 
         public GameForm()
         {
@@ -43,9 +45,9 @@ namespace GoatHunting
             // Subscribe to the bullet firing event
             _player.OnBulletFired += AddBulletToForm;
 
-            // Timer for animations
+            // Timer for animations and movement
             _animationTimer = new System.Windows.Forms.Timer { Interval = AnimationInterval };
-            _animationTimer.Tick += (sender, e) => Render();
+            _animationTimer.Tick += (sender, e) => UpdateGame();
             _animationTimer.Start();
 
             // Movement and shooting key bindings
@@ -54,39 +56,57 @@ namespace GoatHunting
             this.KeyUp += OnKeyUp;
         }
 
-        private void Render()
+        private void UpdateGame()
         {
+            // Update player movement
+            if (goLeft) _player.Walk(Keys.Left, this.ClientSize);
+            if (goRight) _player.Walk(Keys.Right, this.ClientSize);
+            if (goUp) _player.Walk(Keys.Up, this.ClientSize);
+            if (goDown) _player.Walk(Keys.Down, this.ClientSize);
+
+            // Render animations
             _player.Animate();
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
         {
-            //switch (e.KeyCode)
-            //{
-            //    case Keys.Space:
-            //        _player.FireBulletBasedOnDirection(); // Use the method from the corrected code
-            //        break;
-            //    case Keys.Left:
-            //    case Keys.Right:
-            //    case Keys.Up:
-            //    case Keys.Down:
-            //        _player.Walk(e.KeyCode, this.ClientSize);
-            //        break;
-            //}
-            if (e.KeyCode == Keys.Space)
+            switch (e.KeyCode)
             {
-                _player.FireBulletBasedOnDirection(); // Shoot without stopping movement
-
-            }
-            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.Right || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
-            {
-                _player.Walk(e.KeyCode, this.ClientSize); // Move the player
+                case Keys.Left:
+                    goLeft = true;
+                    break;
+                case Keys.Right:
+                    goRight = true;
+                    break;
+                case Keys.Up:
+                    goUp = true;
+                    break;
+                case Keys.Down:
+                    goDown = true;
+                    break;
+                case Keys.Space:
+                    _player.FireBulletBasedOnDirection();
+                    break;
             }
         }
 
         private void OnKeyUp(object sender, KeyEventArgs e)
         {
-            _player.StopWalking();
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    goLeft = false;
+                    break;
+                case Keys.Right:
+                    goRight = false;
+                    break;
+                case Keys.Up:
+                    goUp = false;
+                    break;
+                case Keys.Down:
+                    goDown = false;
+                    break;
+            }
         }
 
         private void AddBulletToForm(Bullet bullet)

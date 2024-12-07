@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|c:\\users\\mp29c\\onedrive\\desktop\\git pull\\fp-pbo-goathuntingsimulator\\goathunting\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|solutionrelative:goathunting\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|c:\\users\\mp29c\\onedrive\\desktop\\git pull\\fp-pbo-goathuntingsimulator\\goathunting\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|solutionrelative:goathunting\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|c:\\users\\mp29c\\onedrive\\desktop\\git pull\\fp-pbo-goathuntingsimulator\\goathunting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|solutionrelative:goathunting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|c:\\users\\mp29c\\onedrive\\desktop\\git pull\\fp-pbo-goathuntingsimulator\\goathunting\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|solutionrelative:goathunting\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F239268-92B9-4BC9-914F-8C21C6776ED0}|GoatHunting\\GoatHunting.csproj|c:\\users\\mp29c\\onedrive\\desktop\\git pull\\fp-pbo-goathuntingsimulator\\goathunting\\resources\\shooter.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Program.cs",
               "RelativeDocumentMoniker": "GoatHunting\\Program.cs",
@@ -62,12 +62,11 @@
               "RelativeToolTip": "GoatHunting\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T12:48:33.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T12:48:33.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Player.cs",
               "RelativeDocumentMoniker": "GoatHunting\\Player.cs",
@@ -75,46 +74,44 @@
               "RelativeToolTip": "GoatHunting\\Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAANIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T12:50:03.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T12:50:03.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameForm.cs",
               "DocumentMoniker": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\GameForm.cs",
               "RelativeDocumentMoniker": "GoatHunting\\GameForm.cs",
               "ToolTip": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\GameForm.cs",
               "RelativeToolTip": "GoatHunting\\GameForm.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAADwv1cAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAswBoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T12:55:42.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Bullet.cs",
               "RelativeDocumentMoniker": "GoatHunting\\Bullet.cs",
               "ToolTip": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Bullet.cs",
               "RelativeToolTip": "GoatHunting\\Bullet.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAADwvzMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T09:42:20.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GameForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\GameForm.cs",
               "RelativeDocumentMoniker": "GoatHunting\\GameForm.cs",
               "ToolTip": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\GameForm.cs [Design]",
               "RelativeToolTip": "GoatHunting\\GameForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T12:56:40.052Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-04T12:56:40.052Z"
             },
             {
               "$type": "Document",

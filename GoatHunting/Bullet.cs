@@ -8,7 +8,7 @@ namespace GoatHunting
     {
         private const int BulletWidth = 20;
         private const int BulletHeight = 10;
-        private const int Speed = 15;
+        private const int Speed = 24;
 
         private System.Windows.Forms.Timer _movementTimer;
         private PictureBox _bulletPictureBox;
