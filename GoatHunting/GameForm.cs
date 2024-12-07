@@ -1,4 +1,4 @@
-﻿using GoatHunting;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -9,64 +9,80 @@ namespace GoatHunting
         private const int PlayerInitialPositionX = 50;
         private const int PlayerInitialPositionY = 50;
         private const int AnimationInterval = 100;
-        private Label _frameLabel;
-        private long _totalFrameCount;
+
         private Player _player;
         private System.Windows.Forms.Timer _animationTimer;
 
-
         public GameForm()
         {
+            InitializeComponent();
             InitializeLevel();
+        }
+
+        private void InitializeComponent()
+        {
+            // Add any additional form initialization if needed
+            this.SuspendLayout();
+
+            this.ClientSize = new Size(800, 600);
+            this.Name = "GameForm";
+            this.Text = "Goat Hunting";
+
+            this.ResumeLayout(false);
         }
 
         private void InitializeLevel()
         {
             this.Text = "Level 1";
-            this.Size = new Size(800, 600);
             this.BackColor = Color.LightGray;
 
-            //_frameLabel = new Label
-            //{
-            //    Text = "Total frames: ",
-            //    Location = new Point(10, 10),
-            //    AutoSize = true,
-            //    Font = new Font("Arial", 16),
-            //    ForeColor = Color.Black
-            //};
-            //this.Controls.Add(_frameLabel);
-
-            //initialize player
+            // Initialize player
             _player = new Player(new Point(PlayerInitialPositionX, PlayerInitialPositionY));
             this.Controls.Add(_player.GetPictureBox());
 
-            // untuk timer
+            // Subscribe to the bullet firing event
+            _player.OnBulletFired += AddBulletToForm;
+
+            // Timer for animations
             _animationTimer = new System.Windows.Forms.Timer { Interval = AnimationInterval };
             _animationTimer.Tick += (sender, e) => Render();
             _animationTimer.Start();
 
-            // movement
+            // Movement and shooting key bindings
+            this.KeyPreview = true;
             this.KeyDown += OnKeyDown;
             this.KeyUp += OnKeyUp;
         }
-        //private void UpdateFrameCount()
-        //{
-        //    _totalFrameCount++;
-        //    _frameLabel.Text = "Total frames: " + _totalFrameCount;
-        //}
+
         private void Render()
         {
-            //UpdateFrameCount();
             _player.Animate();
         }
+
         private void OnKeyDown(object sender, KeyEventArgs e)
         {
-            _player.Walk(e.KeyCode, this.ClientSize);
+            switch (e.KeyCode)
+            {
+                case Keys.Space:
+                    _player.FireBulletBasedOnDirection(); // Use the method from the corrected code
+                    break;
+                case Keys.Left:
+                case Keys.Right:
+                case Keys.Up:
+                case Keys.Down:
+                    _player.Walk(e.KeyCode, this.ClientSize);
+                    break;
+            }
         }
 
         private void OnKeyUp(object sender, KeyEventArgs e)
         {
             _player.StopWalking();
+        }
+
+        private void AddBulletToForm(Bullet bullet)
+        {
+            this.Controls.Add(bullet.GetPictureBox());
         }
     }
 }
