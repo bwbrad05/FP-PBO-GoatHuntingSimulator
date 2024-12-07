@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace GoatHunting
 {
@@ -11,6 +12,7 @@ namespace GoatHunting
         private const int PlayerHeight = 85;
         private const int MovementSpeed = 10;
         private const int TotalFrames = 4;
+        private const int ShootCooldown = 300; // Milliseconds between shots
 
         public event Action<Bullet> OnBulletFired;
 
@@ -18,8 +20,9 @@ namespace GoatHunting
         private Image _spriteSheet;
         private int _currentFrame;
         private int _currentRow;
-        private Keys _currentDirection;
         private bool _isWalking;
+        private DateTime _lastShotTime = DateTime.MinValue;
+        private HashSet<Keys> _pressedKeys = new HashSet<Keys>();
 
         public Player(Point initialPosition)
         {
@@ -49,10 +52,62 @@ namespace GoatHunting
 
         public PictureBox GetPictureBox() => _playerPictureBox;
 
+        public void HandleKeyDown(Keys key, Size formClientSize)
+        {
+            _pressedKeys.Add(key);
+
+            // Handle movement keys
+            if (IsMovementKey(key))
+            {
+                Walk(key, formClientSize);
+            }
+
+            // Handle shooting
+            if (key == Keys.Space)
+            {
+                Walk(key, formClientSize);
+                TryShoot();
+            }
+        }
+
+        public void HandleKeyUp(Keys key)
+        {
+            _pressedKeys.Remove(key);
+
+            // Stop walking if no movement keys are pressed
+            if (!HasMovementKeyPressed())
+            {
+                StopWalking();
+            }
+        }
+
+        private bool IsMovementKey(Keys key)
+        {
+            return key == Keys.Down || key == Keys.Up ||
+                   key == Keys.Left || key == Keys.Right;
+        }
+
+        private bool HasMovementKeyPressed()
+        {
+            return _pressedKeys.Contains(Keys.Down) ||
+                   _pressedKeys.Contains(Keys.Up) ||
+                   _pressedKeys.Contains(Keys.Left) ||
+                   _pressedKeys.Contains(Keys.Right);
+        }
+
+        private void TryShoot()
+        {
+            // Check cooldown
+            if ((DateTime.Now - _lastShotTime).TotalMilliseconds >= ShootCooldown)
+            {
+                FireBulletBasedOnDirection();
+                _lastShotTime = DateTime.Now;
+            }
+        }
+
         public void Walk(Keys direction, Size formClientSize)
         {
             _isWalking = true;
-            _currentDirection = direction;
 
             // Update current row based on direction
             switch (direction)
@@ -89,6 +144,7 @@ namespace GoatHunting
 
         public void Animate()
         {
+            // Animate while walking
             if (_isWalking)
             {
                 _currentFrame = (_currentFrame + 1) % TotalFrames;
@@ -149,6 +205,7 @@ namespace GoatHunting
             }
 
             FireBullet(directionX, directionY);
+            
         }
 
         private void FireBullet(int directionX, int directionY)

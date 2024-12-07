@@ -61,17 +61,26 @@ namespace GoatHunting
 
         private void OnKeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            //switch (e.KeyCode)
+            //{
+            //    case Keys.Space:
+            //        _player.FireBulletBasedOnDirection(); // Use the method from the corrected code
+            //        break;
+            //    case Keys.Left:
+            //    case Keys.Right:
+            //    case Keys.Up:
+            //    case Keys.Down:
+            //        _player.Walk(e.KeyCode, this.ClientSize);
+            //        break;
+            //}
+            if (e.KeyCode == Keys.Space)
             {
-                case Keys.Space:
-                    _player.FireBulletBasedOnDirection(); // Use the method from the corrected code
-                    break;
-                case Keys.Left:
-                case Keys.Right:
-                case Keys.Up:
-                case Keys.Down:
-                    _player.Walk(e.KeyCode, this.ClientSize);
-                    break;
+                _player.FireBulletBasedOnDirection(); // Shoot without stopping movement
+
+            }
+            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.Right || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                _player.Walk(e.KeyCode, this.ClientSize); // Move the player
             }
         }
 
