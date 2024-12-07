@@ -63,9 +63,9 @@ namespace GoatHunting {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] character_sprite_sheet {
+        internal static byte[] shooter {
             get {
-                object obj = ResourceManager.GetObject("character_sprite_sheet", resourceCulture);
+                object obj = ResourceManager.GetObject("shooter", resourceCulture);
                 return ((byte[])(obj));
             }
         }

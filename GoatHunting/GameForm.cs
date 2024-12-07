@@ -26,15 +26,15 @@ namespace GoatHunting
             this.Size = new Size(800, 600);
             this.BackColor = Color.LightGray;
 
-            _frameLabel = new Label
-            {
-                Text = "Total frames: ",
-                Location = new Point(10, 10),
-                AutoSize = true,
-                Font = new Font("Arial", 16),
-                ForeColor = Color.Black
-            };
-            this.Controls.Add(_frameLabel);
+            //_frameLabel = new Label
+            //{
+            //    Text = "Total frames: ",
+            //    Location = new Point(10, 10),
+            //    AutoSize = true,
+            //    Font = new Font("Arial", 16),
+            //    ForeColor = Color.Black
+            //};
+            //this.Controls.Add(_frameLabel);
 
             //initialize player
             _player = new Player(new Point(PlayerInitialPositionX, PlayerInitialPositionY));
@@ -49,14 +49,14 @@ namespace GoatHunting
             this.KeyDown += OnKeyDown;
             this.KeyUp += OnKeyUp;
         }
-        private void UpdateFrameCount()
-        {
-            _totalFrameCount++;
-            _frameLabel.Text = "Total frames: " + _totalFrameCount;
-        }
+        //private void UpdateFrameCount()
+        //{
+        //    _totalFrameCount++;
+        //    _frameLabel.Text = "Total frames: " + _totalFrameCount;
+        //}
         private void Render()
         {
-            UpdateFrameCount();
+            //UpdateFrameCount();
             _player.Animate();
         }
         private void OnKeyDown(object sender, KeyEventArgs e)

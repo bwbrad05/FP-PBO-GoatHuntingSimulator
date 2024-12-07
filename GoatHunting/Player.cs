@@ -8,7 +8,7 @@ namespace GoatHunting
     {
         private const int PlayerWidth = 70;
         private const int PlayerHeight = 85;
-        private const int TotalFrames = 8;
+        private const int TotalFrames = 4;
 
         private PictureBox _playerPictureBox;
         private Image _spriteSheet;
@@ -18,7 +18,7 @@ namespace GoatHunting
 
         public Player(Point startPosition)
         {
-            using (MemoryStream ms = new MemoryStream(Resource.character_sprite_sheet))
+            using (MemoryStream ms = new MemoryStream(Resource.shooter))
             {
                 _spriteSheet = Image.FromStream(ms);
             }
@@ -51,17 +51,17 @@ namespace GoatHunting
                         _playerPictureBox.Top += speed;
                     break;
                 case Keys.Up:
-                    _currentRow = 1;
+                    _currentRow = 3;
                     if (_playerPictureBox.Top > 0)
                         _playerPictureBox.Top -= speed;
                     break;
                 case Keys.Left:
-                    _currentRow = 2;
+                    _currentRow = 1;
                     if (_playerPictureBox.Left > 0)
                         _playerPictureBox.Left -= speed;
                     break;
                 case Keys.Right:
-                    _currentRow = 3;
+                    _currentRow = 2;
                     if (_playerPictureBox.Right < boundary.Width)
                         _playerPictureBox.Left += speed;
                     break;
@@ -89,15 +89,28 @@ namespace GoatHunting
 
         private void UpdateSprite()
         {
-            int frameWidth = _spriteSheet.Width / TotalFrames;
-            int frameHeight = _spriteSheet.Height / 4;
+            int frameWidth = _spriteSheet.Width / TotalFrames; // Width of a single frame
+            int frameHeight = _spriteSheet.Height / 4;        // Height of a single row (4 directions)
 
-            Rectangle srcRect = new Rectangle(_currentFrame * frameWidth, _currentRow * frameHeight, frameWidth, frameHeight);
-            Bitmap currentFrameImage = new Bitmap(frameWidth, frameHeight);
+            Rectangle srcRect = new Rectangle(
+                _currentFrame * frameWidth,  // X-coordinate (frame index * frame width)
+                _currentRow * frameHeight,  // Y-coordinate (row index * frame height)
+                frameWidth,                 // Width of the frame
+                frameHeight                 // Height of the frame
+            );
+
+            // Create a bitmap with the same size as the PictureBox
+            Bitmap currentFrameImage = new Bitmap(PlayerWidth, PlayerHeight);
 
             using (Graphics g = Graphics.FromImage(currentFrameImage))
             {
-                g.DrawImage(_spriteSheet, new Rectangle(0, 0, frameWidth, frameHeight), srcRect, GraphicsUnit.Pixel);
+                // Scale the sprite to fit the PictureBox dimensions
+                g.DrawImage(
+                    _spriteSheet,
+                    new Rectangle(0, 0, PlayerWidth, PlayerHeight),
+                    srcRect,                                
+                    GraphicsUnit.Pixel
+                );
             }
 
             _playerPictureBox.Image = currentFrameImage;
