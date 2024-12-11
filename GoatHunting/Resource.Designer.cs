@@ -63,9 +63,15 @@ namespace GoatHunting {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+<<<<<<< HEAD
         internal static byte[] download__1_ {
             get {
                 object obj = ResourceManager.GetObject("download (1)", resourceCulture);
+=======
+        internal static byte[] goat {
+            get {
+                object obj = ResourceManager.GetObject("goat", resourceCulture);
+>>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
                 return ((byte[])(obj));
             }
         }

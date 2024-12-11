@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "GoatHunting\\GameForm.cs",
               "ToolTip": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\GameForm.cs",
               "RelativeToolTip": "GoatHunting\\GameForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T13:02:27.262Z",
               "EditorCaption": ""
@@ -71,20 +71,18 @@
               "RelativeToolTip": "GoatHunting\\Goat.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAYwHgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T03:21:46.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T03:21:46.762Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "shooter.png - PNG [156x196, 32 bit, PNG]",
+              "Title": "shooter.png",
               "DocumentMoniker": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Resources\\shooter.png",
               "RelativeDocumentMoniker": "GoatHunting\\Resources\\shooter.png",
-              "ToolTip": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Resources\\shooter.png - PNG [156x196, 32 bit, PNG]",
-              "RelativeToolTip": "GoatHunting\\Resources\\shooter.png - PNG [156x196, 32 bit, PNG]",
+              "ToolTip": "C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Resources\\shooter.png",
+              "RelativeToolTip": "GoatHunting\\Resources\\shooter.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-12-07T09:25:48.12Z",
-              "EditorCaption": " - PNG [156x196, 32 bit, PNG]"
+              "WhenOpened": "2024-12-07T09:25:48.12Z"
             },
             {
               "$type": "Document",
@@ -96,8 +94,7 @@
               "RelativeToolTip": "GoatHunting\\Player.cs",
               "ViewState": "AgIAAMsAAAAAAAAAAAAgwN8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T12:50:03.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T12:50:03.335Z"
             },
             {
               "$type": "Document",
@@ -109,8 +106,7 @@
               "RelativeToolTip": "GoatHunting\\Bullet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T09:42:20.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T09:42:20.563Z"
             },
             {
               "$type": "Document",
@@ -122,8 +118,7 @@
               "RelativeToolTip": "GoatHunting\\Resources\\goat.Designer.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T05:04:23.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T05:04:23.398Z"
             },
             {
               "$type": "Document",
@@ -135,8 +130,7 @@
               "RelativeToolTip": "GoatHunting\\Resource.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T10:03:59.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T10:03:59.406Z"
             }
           ]
         }

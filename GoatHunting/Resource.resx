@@ -121,7 +121,12 @@
   <data name="shooter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\shooter.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+<<<<<<< HEAD
   <data name="download (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\download (1).jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+=======
+  <data name="goat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\goat.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+>>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
   </data>
 </root>

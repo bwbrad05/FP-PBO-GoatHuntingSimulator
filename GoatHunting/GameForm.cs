@@ -65,6 +65,7 @@ namespace GoatHunting
         {
             // Add three goats at predefined positions
             var initialGoatPositions = new List<Point>
+<<<<<<< HEAD
         {
             new Point(200, 150),
             new Point(400, 300),
@@ -75,17 +76,31 @@ namespace GoatHunting
             {
                 var goat = new Goat(position, this);
                 goat.OnGoatSpawned += AddGoatToForm;
+=======
+            {
+                new Point(200, 150),
+                new Point(400, 300),
+                new Point(600, 450)
+            };
+
+            foreach (var position in initialGoatPositions)
+            {
+                var goat = new Goat(position);
+>>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
                 _goats.Add(goat);
                 this.Controls.Add(goat.GetPictureBox());
             }
         }
 
+<<<<<<< HEAD
         private void AddGoatToForm(Goat goat)
         {
             _goats.Add(goat);
             this.Controls.Add(goat.GetPictureBox());
         }
 
+=======
+>>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
         private void UpdateGame()
         {
             // Update player movement
@@ -97,12 +112,19 @@ namespace GoatHunting
             // Render player animations
             _player.Animate();
 
+<<<<<<< HEAD
             // Update goat movement and check collisions
             for (int i = _goats.Count - 1; i >= 0; i--)
             {
                 var goat = _goats[i];
                 goat.UpdatePosition(_player.GetPictureBox().Location);
                 goat.CheckCollision(_player);
+=======
+            // Update goat movement
+            foreach (var goat in _goats)
+            {
+                goat.UpdatePosition(_player.GetPictureBox().Location);
+>>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
             }
         }
 
