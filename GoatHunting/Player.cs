@@ -26,8 +26,6 @@ namespace GoatHunting
 
         public Player(Point initialPosition)
         {
-            // Load sprite sheet from resources
-            // Note: You'll need to replace Resource.shooter with your actual resource
             using (MemoryStream ms = new MemoryStream(Resource.shooter))
             {
                 _spriteSheet = Image.FromStream(ms);
@@ -220,5 +218,18 @@ namespace GoatHunting
             // Raise an event to notify the game form to add the bullet to the controls
             OnBulletFired?.Invoke(bullet);
         }
+
+        private int _health = 100;
+
+        public void TakeDamage(int damage)
+        {
+            _health -= damage;
+            if (_health <= 0)
+            {
+                _health = 0;
+                // Handle player death (e.g., end game or respawn)
+            }
+        }
+
     }
 }

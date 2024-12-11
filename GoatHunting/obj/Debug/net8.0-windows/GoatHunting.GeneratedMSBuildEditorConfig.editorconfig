@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GoatHunting
-build_property.ProjectDir = C:\Users\MP29C\OneDrive\Desktop\git pull\FP-PBO-GoatHuntingSimulator\GoatHunting\
+build_property.ProjectDir = C:\ITS\Semester 3\PBO\FP\FP-PBO-GoatHuntingSimulator\GoatHunting\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

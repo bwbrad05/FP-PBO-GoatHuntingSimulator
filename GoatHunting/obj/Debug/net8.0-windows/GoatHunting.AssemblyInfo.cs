@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoatHunting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8bb1fb6b00cf00b9ddb9f5f34788a49d0610186")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04487c0b6b522c8ce913d1b0e24a5b37bca107de")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoatHunting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoatHunting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
