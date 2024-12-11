@@ -34,3 +34,4 @@ C:\Users\MP29C\OneDrive\Desktop\git pull\FP-PBO-GoatHuntingSimulator\GoatHunting
 C:\Users\MP29C\OneDrive\Desktop\git pull\FP-PBO-GoatHuntingSimulator\GoatHunting\bin\Debug\net8.0-windows\GoatHunting.pdb
 C:\Users\MP29C\OneDrive\Desktop\git pull\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.genruntimeconfig.cache
 C:\Users\MP29C\OneDrive\Desktop\git pull\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\ref\GoatHunting.dll
+C:\Users\MP29C\OneDrive\Desktop\git pull\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.Resources.goat.resources

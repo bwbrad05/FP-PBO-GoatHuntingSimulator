@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,31 +12,32 @@ namespace GoatHunting
         private const int AnimationInterval = 16;
 
         private Player _player;
+        private List<Goat> _goats = new List<Goat>(); // List to manage multiple goats
         private System.Windows.Forms.Timer _animationTimer;
+        
+        private GoatSpawner _goatSpawner;
 
         private bool goLeft, goRight, goUp, goDown; // Movement flags
 
         public GameForm()
         {
-            InitializeComponent();
             InitializeLevel();
+            InitializeComponent();
+            _goatSpawner = new GoatSpawner(this);
         }
 
         private void InitializeComponent()
         {
-            // Add any additional form initialization if needed
             this.SuspendLayout();
-
             this.ClientSize = new Size(800, 600);
             this.Name = "GameForm";
             this.Text = "Goat Hunting";
-
             this.ResumeLayout(false);
         }
 
         private void InitializeLevel()
         {
-            this.Text = "Level 1";
+            this.Text = "Level Newbie";
             this.BackColor = Color.LightGray;
 
             // Initialize player
@@ -44,6 +46,9 @@ namespace GoatHunting
 
             // Subscribe to the bullet firing event
             _player.OnBulletFired += AddBulletToForm;
+
+            // Initialize goats
+            InitializeGoats();
 
             // Timer for animations and movement
             _animationTimer = new System.Windows.Forms.Timer { Interval = AnimationInterval };
@@ -56,6 +61,31 @@ namespace GoatHunting
             this.KeyUp += OnKeyUp;
         }
 
+        private void InitializeGoats()
+        {
+            // Add three goats at predefined positions
+            var initialGoatPositions = new List<Point>
+        {
+            new Point(200, 150),
+            new Point(400, 300),
+            new Point(600, 450)
+        };
+
+            foreach (var position in initialGoatPositions)
+            {
+                var goat = new Goat(position, this);
+                goat.OnGoatSpawned += AddGoatToForm;
+                _goats.Add(goat);
+                this.Controls.Add(goat.GetPictureBox());
+            }
+        }
+
+        private void AddGoatToForm(Goat goat)
+        {
+            _goats.Add(goat);
+            this.Controls.Add(goat.GetPictureBox());
+        }
+
         private void UpdateGame()
         {
             // Update player movement
@@ -64,8 +94,16 @@ namespace GoatHunting
             if (goUp) _player.Walk(Keys.Up, this.ClientSize);
             if (goDown) _player.Walk(Keys.Down, this.ClientSize);
 
-            // Render animations
+            // Render player animations
             _player.Animate();
+
+            // Update goat movement and check collisions
+            for (int i = _goats.Count - 1; i >= 0; i--)
+            {
+                var goat = _goats[i];
+                goat.UpdatePosition(_player.GetPictureBox().Location);
+                goat.CheckCollision(_player);
+            }
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
