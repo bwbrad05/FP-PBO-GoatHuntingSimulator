@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-<<<<<<< HEAD
-using System.Collections.Generic;
-=======
->>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
+using Timer = System.Windows.Forms.Timer;
 
 namespace GoatHunting
 {
@@ -14,7 +11,6 @@ namespace GoatHunting
         private const int GoatHeight = 75;
         private const int MovementSpeed = 5; // Speed at which the goat moves
         private const int DamageAmount = 10; // Amount of damage the goat deals
-<<<<<<< HEAD
         private const int SpawnInterval = 3000; // 3 seconds in milliseconds
 
         public event Action<int> OnPlayerDamaged; // Event to notify player damage
@@ -30,25 +26,12 @@ namespace GoatHunting
         {
             _parentForm = parentForm;
 
-=======
-
-        public event Action<int> OnPlayerDamaged; // Event to notify player damage
-
-        private PictureBox _goatPictureBox;
-        private Image _goatImage;
-        private Point _targetPosition; // Player's position to be attracted to
-        private bool _isActive = true; // Indicates if the goat is active
-
-        public Goat(Point initialPosition)
-        {
->>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
             _goatPictureBox = new PictureBox
             {
                 Size = new Size(GoatWidth, GoatHeight),
                 Location = initialPosition,
-<<<<<<< HEAD
                 BackColor = Color.YellowGreen,
-                Tag = "Goat",   
+                Tag = "Goat",
                 SizeMode = PictureBoxSizeMode.StretchImage
             };
 
@@ -77,21 +60,6 @@ namespace GoatHunting
 
             Goat newGoat = new Goat(newPosition, _parentForm);
             OnGoatSpawned?.Invoke(newGoat);
-=======
-                BackColor = Color.Transparent,
-                Image = Resource.goat,
-                SizeMode = PictureBoxSizeMode.StretchImage
-            };
-            //try
-            //{
-            //    _goatPictureBox.Image = Resource.goat;
-            //}
-            //catch (Exception ex)
-            //{
-            //    _goatPictureBox.BackColor = Color.Black;
-            //    Console.WriteLine("Gagal load image basket: " + ex.Message);
-            //}
->>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
         }
 
         public PictureBox GetPictureBox() => _goatPictureBox;
@@ -127,12 +95,9 @@ namespace GoatHunting
 
             if (_goatPictureBox.Bounds.IntersectsWith(player.GetPictureBox().Bounds))
             {
-<<<<<<< HEAD
                 // Stop the spawn timer when the goat deals damage
                 _spawnTimer?.Stop();
 
-=======
->>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
                 // Notify player damage
                 OnPlayerDamaged?.Invoke(DamageAmount);
                 _isActive = false; // Goat stops moving after dealing damage
@@ -143,7 +108,6 @@ namespace GoatHunting
         {
             _isActive = true;
             _goatPictureBox.Location = newPosition;
-<<<<<<< HEAD
             _spawnTimer?.Start();
         }
 
@@ -155,8 +119,3 @@ namespace GoatHunting
         }
     }
 }
-=======
-        }
-    }
-}
->>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b

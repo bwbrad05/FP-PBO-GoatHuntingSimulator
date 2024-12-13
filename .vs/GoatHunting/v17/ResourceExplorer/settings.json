@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\GameForm.resx","C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Resource.resx","C:\\Users\\MP29C\\OneDrive\\Desktop\\git pull\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Resources\\goat.resx"],"VisibleColumnKeys":["name","neutral-value"]}
-=======
-{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["C:\\ITS\\Semester 3\\PBO\\FP\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\GameForm.resx","C:\\ITS\\Semester 3\\PBO\\FP\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Resource.resx"],"VisibleColumnKeys":["name","neutral-value"]}
->>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
+{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["C:\\ITS\\Semester 3\\PBO\\FINAL PROJECTTT\\FP-PBO-GoatHuntingSimulator\\GoatHunting\\Resources\\goat.resx"],"VisibleColumnKeys":["name","neutral-value"]}

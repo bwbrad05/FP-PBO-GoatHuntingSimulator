@@ -56,3 +56,9 @@ C:\ITS\Semester 3\PBO\FP\FP-PBO-GoatHuntingSimulator\GoatHunting\bin\Debug\net8.
 C:\ITS\Semester 3\PBO\FP\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.genruntimeconfig.cache
 C:\ITS\Semester 3\PBO\FP\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\ref\GoatHunting.dll
 >>>>>>> fbbeb7e9460b1d9f5709d3a22f820aae1b78445b
+C:\ITS\Semester 3\PBO\FINAL PROJECTTT\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.GameForm.resources
+C:\ITS\Semester 3\PBO\FINAL PROJECTTT\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.Resources.goat.resources
+C:\ITS\Semester 3\PBO\FINAL PROJECTTT\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.csproj.GenerateResource.cache
+C:\ITS\Semester 3\PBO\FINAL PROJECTTT\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.dll
+C:\ITS\Semester 3\PBO\FINAL PROJECTTT\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\refint\GoatHunting.dll
+C:\ITS\Semester 3\PBO\FINAL PROJECTTT\FP-PBO-GoatHuntingSimulator\GoatHunting\obj\Debug\net8.0-windows\GoatHunting.pdb

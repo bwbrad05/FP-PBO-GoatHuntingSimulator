@@ -203,21 +203,26 @@ namespace GoatHunting
             }
 
             FireBullet(directionX, directionY);
-            
+
         }
 
-        private void FireBullet(int directionX, int directionY)
+        public void FireBullet(int directionX, int directionY)
         {
             Point bulletStartPosition = new Point(
                 _playerPictureBox.Left + (_playerPictureBox.Width / 2) - (20 / 2), // Center the bullet horizontally
                 _playerPictureBox.Top + (_playerPictureBox.Height / 2) - (10 / 2) // Center the bullet vertically
             );
 
-            Bullet bullet = new Bullet(bulletStartPosition, directionX, directionY);
+            // Pass the parent form (which is accessible via _playerPictureBox.Parent) to the Bullet constructor
+            if (_playerPictureBox.Parent is Form parentForm)
+            {
+                Bullet bullet = new Bullet(bulletStartPosition, directionX, directionY, parentForm);
 
-            // Raise an event to notify the game form to add the bullet to the controls
-            OnBulletFired?.Invoke(bullet);
+                // Raise an event to notify the game form to add the bullet to the controls
+                OnBulletFired?.Invoke(bullet);
+            }
         }
+
 
         private int _health = 100;
 
